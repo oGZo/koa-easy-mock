@@ -21,10 +21,9 @@
     "url": "https://github.com/oGZo/koa-easy-mock.git"
   },
   "dependencies": {
-    "common-bin": "^2.8.1",
-    "koa": "^2.7.0",
-    "koa-body": "^4.1.0",
-    "koa-router": "^7.4.0",
-    "yargs": "^13.2.2"
+    "common-bin": "2.8.1",
+    "koa": "2.7.0",
+    "koa-bodyparser": "4.2.1",
+    "yargs": "13.2.2"
   }
 }
