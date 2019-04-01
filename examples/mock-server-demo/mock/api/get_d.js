@@ -3,8 +3,11 @@ module.exports = ctx => {
   ctx.body = {
     ...responseClass,
     data: {
-      nCode: 1000001,
-      resultList: [10590],
+      a: 1,
+      body: ctx.req.body || ctx.request.body,
+      query: ctx.query,
     },
+    code: 1,
+    message: '测试一下 method',
   };
 };

@@ -15,6 +15,7 @@
   "author": "ozgzzyzo@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.7.0"
+    "koa": "^2.7.0",
+    "koa-bodyparser": "4.2.1"
   }
 }
