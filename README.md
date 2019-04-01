@@ -10,23 +10,25 @@
 | apiPath    | string  | 接口地址         |  /api    |
 | apiFilePath| string  | api文件放置地址   |   mock  |
 
+### mock数据结构示例  ![示例](http://gz-public.oss-cn-shenzhen.aliyuncs.com/wiki/WechatIMG4.png)
 #### 用法
 ```
 # 安装koa-easy-mock包
 npm i -g koa-easy-mock / npm i -D koa-easy-mock
 
 # 工程根目录下使用该命令
-easy-mock --apiFilePath=mock --port=3001 --apiPath=/api
+easy-mock --apiFilePath=mock/api --port=3001 --apiPath=/api
 
 ```
 
 ### 2. 以middeware(中间件)的形式使用
 #### 参数
-| key        | type    | description    | default  |
-| --------   | -----:  | ---------:     | :----:   |
-| getApiPath | function| 获取api方法      |  defaultGetApiPath    |
-| apiPath    | string  | 接口地址         |  /api    |
-| apiFilePath| string  | api文件放置地址   |   mock  |
+| key         | type     | description    | default  |
+| --------    | -----:   | ---------:     | :----:   |
+| getApiPath  | function | 获取api方法      |  defaultGetApiPath    |
+| apiPath     | string   | 接口地址         |  /api    |
+| apiFilePath | string   | api文件放置地址   |   mock  |
+| isMock      | boolean  |  是否使用mock   |   undefined  |
 
 #### 用法
 
@@ -43,7 +45,8 @@ const port = 3001;
 
 app.use(easyMock.easyMockMiddle({
     apiFilePath: 'mock/api',
-    apiPath: '/api'
+    apiPath: '/api',
+    isMock: true
 }))
 app.listen(port, () => {
     console.log(`mock start: http://localhost:${port}`);
